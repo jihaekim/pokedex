@@ -37,10 +37,10 @@ class Pokemon {
 
 //use api to get info
 
+let outsideContainer = document.getElementById('container')
+let statusContainer = document.getElementById('status-container')
 
-let getPokemon = (searchInput) =>{
-    
-}
+
 
 axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/200.json").then((response)=>{
     console.log(response.data);
@@ -48,6 +48,7 @@ axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/200.json").then((respons
     //then create instance using info
 
     let data=response.data;
+    
 
 
     let misdreavus = new Pokemon (
@@ -59,4 +60,21 @@ axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/200.json").then((respons
     )
      console.log (misdreavus);
 
+
+
+     //displaying info 
+
+    let nameInfo = document.createElement('p');
+    let hpInfo = document.createElement('p');
+    let attackInfo = document.createElement('p');
+    let defenseInfo = document.createElement('p');
+    let abilitiesInfo = document.createElement('p');
+
+   nameInfo.innerText = data.name;
+
+ statusContainer.appendChild(nameInfo);
+
+
+
 })
+
