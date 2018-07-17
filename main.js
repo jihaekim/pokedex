@@ -76,8 +76,9 @@ axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/200.json").then((respons
 
 
 //try to refactor. maybe make function for append child at once
- nameInfo.innerText = "Pokemon Name: " + data.name;
- statusContainer.appendChild(nameInfo);
+ nameInfo.innerText = data.name;
+ nameInfo.id = nameText;
+ pokemonContainer.appendChild(nameInfo);
 
  hpInfo.innerText = "HP: " + data.stats[5].base_stat;
  statusContainer.appendChild(hpInfo);
