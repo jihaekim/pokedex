@@ -99,6 +99,3 @@ axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/200.json").then((respons
 
 pokemonContainer.appendChild(createImg);
 })
-
-
-
