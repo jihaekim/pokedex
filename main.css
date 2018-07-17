@@ -16,11 +16,16 @@ body {
     background-color: #7b818c;
     margin-left: 5%;
     margin-top: 3%;
-    border-radius: 5%; }
+    border-radius: 5%;
+    font-family: 'Space Mono', monospace; }
 
 #pokemon-container #pokemonPic {
   height: 200px;
   width: 200px; }
+#pokemon-container #nameText {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Space Mono', monospace; }
 
 #search-form {
   text-align: right;
