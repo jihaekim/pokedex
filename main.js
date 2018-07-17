@@ -26,12 +26,13 @@ class Trainer{
 }
 
 class Pokemon {
-    constructor (pokemonName, hp,attack,defense,abilities){
+    constructor (pokemonName, hp,attack,defense,abilities,image){
         this.pokemonName = pokemonName
         this.hp = hp
         this.attack = attack
         this.defense = defense
         this.abilities = abilities 
+        this.image = image
     }   
 }
 
@@ -57,6 +58,7 @@ axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/200.json").then((respons
         data.stats[4].base_stat,
         data.stats[3].base_stat,
         data.abilities[0].ability.name,
+        data.sprites.front_default,
     )
      console.log (misdreavus);
 
@@ -74,8 +76,9 @@ axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/200.json").then((respons
 
 
 //try to refactor. maybe make function for append child at once
- nameInfo.innerText = "Pokemon Name: " + data.name;
- statusContainer.appendChild(nameInfo);
+ nameInfo.innerText = data.name;
+ nameInfo.id = nameText;
+ pokemonContainer.appendChild(nameInfo);
 
  hpInfo.innerText = "HP: " + data.stats[5].base_stat;
  statusContainer.appendChild(hpInfo);
@@ -95,7 +98,7 @@ axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/200.json").then((respons
 
  let createImg = document.createElement('img');
  createImg.id = "pokemonPic"
- createImg.setAttribute('src','https://assets.pokemon.com/assets/cms2/img/pokedex/full/200.png')
+ createImg.setAttribute('src',data.sprites.front_default);
 
 pokemonContainer.appendChild(createImg);
 })
