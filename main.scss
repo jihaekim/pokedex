@@ -5,7 +5,8 @@ $light-gray :#7b818c;
 }
 
 body{
-    background-color:red;
+    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/VGiBmTeaeilt7mgjb/video-game-background-blue_451fb1bpx__F0000.png");
+    background-size: cover;
 }
 
 
@@ -15,20 +16,19 @@ body{
     margin-top: 5%;
 
     #pokemon-container{
-        padding: 10% 5% 0 5%;
+        @include dimension(350px,350px);
         background-color:white;
         border-radius: 5%;
        
     }
     
     #status-container{
-        @include dimension(10%,15%);
-        padding:5%;
-        background-color:$light-gray;
-
+        @include dimension(250px,325px);
+        padding-top: 2%;
         margin-left:5%;
         margin-top:3%;
         border-radius:5%;
+        background-color:$light-gray;
         font-family: 'Space Mono', monospace;
 
     }
@@ -38,11 +38,21 @@ body{
 #pokemon-container{
     #pokemonPic{
         @include dimension(200px,200px );
+        margin-left: 20%;
+        
     }
     #nameText {
+        margin-top: 25%;
         text-align: center;
         text-transform:uppercase;
         font-family: 'Space Mono', monospace;
+    }
+}
+
+
+#status-container{
+    .status{
+        margin-left:10%;
     }
 }
 

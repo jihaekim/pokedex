@@ -1,8 +1,8 @@
 
 
-class Trainer{
-    constructor(trainerName){
-        this.trainerName = trainerName;
+class MsPokeBowl{
+    constructor(){
+        
         this.pokemonArray = []; 
     }
 
@@ -48,6 +48,10 @@ let attackInfo = document.createElement('p');
 let defenseInfo = document.createElement('p');
 let abilitiesInfo = document.createElement('p');
 
+hpInfo.className = "status"
+attackInfo.className = "status"
+defenseInfo.className = "status"
+abilitiesInfo.className = "status"
 
 pokemonContainer.appendChild(nameInfo);
 statusContainer.appendChild(hpInfo);
