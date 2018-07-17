@@ -23,7 +23,7 @@ body{
     #status-container{
         @include dimension(10%,15%);
         padding:5%;
-        background-color:$dark-gray;
+        background-color:$light-gray;
         margin-left:5%;
         margin-top:3%;
         border-radius:5%;
@@ -40,4 +40,5 @@ body{
 #search-form{
     text-align: right;
     margin-right: 23%;
+    
 }
