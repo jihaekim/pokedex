@@ -36,6 +36,10 @@ body{
     #pokemonPic{
         @include dimension(200px,200px );
     }
+    #nameText {
+        text-align: center;
+        text-transform:uppercase;
+    }
 }
 
 #search-form{
