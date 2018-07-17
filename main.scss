@@ -12,17 +12,17 @@ body{
 #container{
     display:flex;
     justify-content: center;
+    margin-top: 5%;
 
     #pokemon-container{
-        @include dimension(10%,10%);
-        padding:17% 10%;
+        padding:5%;
         background-color:white;
         border-radius: 5%;
     }
     
     #status-container{
-        @include dimension(10%,10%);
-        padding:11% 10%;
+        @include dimension(10%,15%);
+        padding:5%;
         background-color:$dark-gray;
         margin-left:5%;
         margin-top:3%;
@@ -30,6 +30,12 @@ body{
     }
 }
 
+
+#pokemon-container{
+    #pokemonPic{
+        @include dimension(300px,300px );
+    }
+}
 
 #search-form{
     text-align: right;
