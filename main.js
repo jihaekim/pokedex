@@ -48,15 +48,31 @@ let attackInfo = document.createElement('p');
 let defenseInfo = document.createElement('p');
 let abilitiesInfo = document.createElement('p');
 
+
+pokemonContainer.appendChild(nameInfo);
+statusContainer.appendChild(hpInfo);
+statusContainer.appendChild(attackInfo);
+statusContainer.appendChild(defenseInfo);
+statusContainer.appendChild(abilitiesInfo);
+
+
+let createImg = document.createElement('img');
+createImg.id = "pokemonPic"
+
 //set each pokemon name to id
 //create function with axios
 //replace the id number with the new id number
 //display that info
-// let diglette = ""
-
-
 
 let searchPokemon = (pokemonId)=>{
+
+if (pokemonId === "misdreavus"){
+    pokemonId = 200;
+} else if (pokemonId === "diglett"){
+    pokemonId = 50;
+} else if (pokemonId === "smoochum"){
+    pokemonId = 238;
+}
 
 axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/' + pokemonId + '.json').then((response)=>{
     console.log(response.data);
@@ -82,26 +98,23 @@ axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/' + pokemonId + '.json')
 
  nameInfo.innerText = data.name;
  nameInfo.id = "nameText";
- pokemonContainer.appendChild(nameInfo);
+
 
  hpInfo.innerText = "HP: " + data.stats[5].base_stat;
- statusContainer.appendChild(hpInfo);
+
 
  attackInfo.innerText= "Attack: " + data.stats[4].base_stat;
- statusContainer.appendChild(attackInfo);
+
 
  defenseInfo.innerText= "Defense: " + data.stats[3].base_stat;
- statusContainer.appendChild(defenseInfo);
+
 
  abilitiesInfo.innerText = "Abilities: " + data.abilities[0].ability.name;
- statusContainer.appendChild(abilitiesInfo);
+
 
 
 
  //display pic
-
- let createImg = document.createElement('img');
- createImg.id = "pokemonPic"
  createImg.setAttribute('src',data.sprites.front_default);
 
 pokemonContainer.appendChild(createImg);
@@ -109,7 +122,7 @@ pokemonContainer.appendChild(createImg);
 
 }
 
-
+//create submit form
 let submitForm = document.getElementById('search-form')
 
 submitForm.addEventListener('submit',(event)=>{
