@@ -42,8 +42,23 @@ let outsideContainer = document.getElementById('container')
 let statusContainer = document.getElementById('status-container')
 let pokemonContainer = document.getElementById('pokemon-container')
 
+let nameInfo = document.createElement('p');
+let hpInfo = document.createElement('p');
+let attackInfo = document.createElement('p');
+let defenseInfo = document.createElement('p');
+let abilitiesInfo = document.createElement('p');
 
-axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/200.json").then((response)=>{
+//set each pokemon name to id
+//create function with axios
+//replace the id number with the new id number
+//display that info
+// let diglette = ""
+
+
+
+let searchPokemon = (pokemonId)=>{
+
+axios.get('https://pokeapi-nycda.firebaseio.com/pokemon/' + pokemonId + '.json').then((response)=>{
     console.log(response.data);
 
     //then create instance using info
@@ -52,7 +67,7 @@ axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/200.json").then((respons
     
 
 
-    let misdreavus = new Pokemon (
+    let newPokemon = new Pokemon (
         data.name,
         data.stats[5].base_stat,
         data.stats[4].base_stat,
@@ -60,22 +75,11 @@ axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/200.json").then((respons
         data.abilities[0].ability.name,
         data.sprites.front_default,
     )
-     console.log (misdreavus);
-
-
+     console.log (newPokemon);
 
 
      //displaying info 
-  
-    let nameInfo = document.createElement('p');
-    let hpInfo = document.createElement('p');
-    let attackInfo = document.createElement('p');
-    let defenseInfo = document.createElement('p');
-    let abilitiesInfo = document.createElement('p');
 
-
-
-//try to refactor. maybe make function for append child at once
  nameInfo.innerText = data.name;
  nameInfo.id = "nameText";
  pokemonContainer.appendChild(nameInfo);
@@ -101,4 +105,16 @@ axios.get("https://pokeapi-nycda.firebaseio.com/pokemon/200.json").then((respons
  createImg.setAttribute('src',data.sprites.front_default);
 
 pokemonContainer.appendChild(createImg);
+})
+
+}
+
+
+let submitForm = document.getElementById('search-form')
+
+submitForm.addEventListener('submit',(event)=>{
+    event.preventDefault();
+    let pokemonId = document.getElementById('search-value').value
+
+    searchPokemon(pokemonId);
 })
