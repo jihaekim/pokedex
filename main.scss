@@ -1,11 +1,62 @@
-$light-gray :#7b818c;
+$dark-black :#060606;
+$light-blue:#7af1f9;
+$light-grey: #979d9e;
 @mixin dimension ($height,$width){
     height: $height;
     width: $width;
 }
 
+
 body{
     background-color:red;
+    border: 5px solid black;
+    height: 805px;
+
+}
+
+//making circle for gameboy design
+
+.circle-lights{
+    margin:10px;
+}
+
+#circles{
+    display:flex; 
+    padding:10px;
+    margin-left: 5%;
+    margin-top: 1%;
+
+    #blue-circle{
+        @include dimension(100px,100px);
+        background-color: $light-blue;
+        border-radius: 50%;
+        border: 10px solid white;
+    }
+
+    #red{
+        @include dimension(20px,20px);
+        border: 2px solid black;
+        border-radius: 50%;
+        background-color: pink;
+    }
+
+    #yellow{
+        @extend #red;
+        background-color:yellow;
+    }
+
+    #green{
+        @extend #red;
+        background-color: greenyellow;
+    }
+}
+
+
+
+
+
+#pokemon-logo{
+    height:100px;
 }
 
 
@@ -15,20 +66,20 @@ body{
     margin-top: 5%;
 
     #pokemon-container{
-        padding: 10% 5% 0 5%;
-        background-color:white;
+        @include dimension(370px,370px);
+        background-color:#ecefea;
         border-radius: 5%;
-       
+        border: 20px solid $light-grey;
+        border-bottom: 90px solid $light-grey;
     }
     
     #status-container{
-        @include dimension(10%,15%);
-        padding:5%;
-        background-color:$light-gray;
-
+        @include dimension(250px,325px);
+        padding-top: 2%;
         margin-left:5%;
         margin-top:3%;
         border-radius:5%;
+        background-color:#81f945;
         font-family: 'Space Mono', monospace;
 
     }
@@ -38,16 +89,62 @@ body{
 #pokemon-container{
     #pokemonPic{
         @include dimension(200px,200px );
+        margin-left: 20%;
+        
     }
     #nameText {
+        margin-top:15%;
         text-align: center;
         text-transform:uppercase;
         font-family: 'Space Mono', monospace;
     }
 }
 
+
+#status-container{
+    
+    .status{
+        margin-left:10%;
+        color:$dark-black;
+    }
+}
+
 #search-form{
     text-align: right;
-    margin-right: 23%;
+    margin-left:60%;
+    width:250px;
+
+    #search-button{
+        border-radius: 5%;
+        background-color: black;
+    }
+
+    #search-value{
+        font-family: 'Space Mono', monospace;
+    }
     
 }
+
+
+#search-button{
+    border-radius: 5%;
+    background-color: black;
+}
+#top-red-dots{
+    position: absolute;
+    display: flex;
+    margin-top: 75px;
+    margin-left: 510px;
+
+
+    .red-dots{
+        @include dimension(10px,10px);
+        border: 2px solid black;
+        border-radius: 50%;
+        background-color: red;
+        margin-right: 6px;
+    }
+
+}
+
+

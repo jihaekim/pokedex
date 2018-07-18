@@ -7,21 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-   
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
 </head>
 <body> 
-<div id= "container">
-<div id = "pokemon-container"></div>
-
-<div id="status-container"></div>
-
+<div id="circles">
+     <div class="circle-lights z-depth-3 " id="blue-circle"></div>
+     <div class="circle-lights z-depth-3 " id="red"></div>
+     <div class="circle-lights z-depth-3 " id="yellow"></div>
+     <div class="circle-lights z-depth-3 " id="green"></div>
 </div>
+
+<div id="top-red-dots">
+   <div class="red-dots"></div>
+   <div class="red-dots"></div>   
+</div>
+
+<div id= "container">
+<div class="z-depth-4" id = "pokemon-container">
+</div>
+
+<div class= "z-depth-4" id="status-container"></div>
+</div>
+
 
 <!-- creating a search button to search pokemon -->
 <form id="search-form">
-    <input id="search-value" type="search">
+    <input autocomplete="off" id="search-value" type="search">
     <input id= "search-button" type = "submit" value = "Search">
 </form>
+
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="main.js"></script>    

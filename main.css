@@ -1,34 +1,96 @@
 body {
-  background-color: red; }
+  background-color: red;
+  border: 5px solid black;
+  height: 805px; }
+
+.circle-lights {
+  margin: 10px; }
+
+#circles {
+  display: flex;
+  padding: 10px;
+  margin-left: 5%;
+  margin-top: 1%; }
+  #circles #blue-circle {
+    height: 100px;
+    width: 100px;
+    background-color: #7af1f9;
+    border-radius: 50%;
+    border: 10px solid white; }
+  #circles #red, #circles #yellow, #circles #green {
+    height: 20px;
+    width: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: pink; }
+  #circles #yellow {
+    background-color: yellow; }
+  #circles #green {
+    background-color: greenyellow; }
+
+#pokemon-logo {
+  height: 100px; }
 
 #container {
   display: flex;
   justify-content: center;
   margin-top: 5%; }
   #container #pokemon-container {
-    padding: 10% 5% 0 5%;
-    background-color: white;
-    border-radius: 5%; }
+    height: 370px;
+    width: 370px;
+    background-color: #ecefea;
+    border-radius: 5%;
+    border: 20px solid #979d9e;
+    border-bottom: 90px solid #979d9e; }
   #container #status-container {
-    height: 10%;
-    width: 15%;
-    padding: 5%;
-    background-color: #7b818c;
+    height: 250px;
+    width: 325px;
+    padding-top: 2%;
     margin-left: 5%;
     margin-top: 3%;
     border-radius: 5%;
+    background-color: #81f945;
     font-family: 'Space Mono', monospace; }
 
 #pokemon-container #pokemonPic {
   height: 200px;
-  width: 200px; }
+  width: 200px;
+  margin-left: 20%; }
 #pokemon-container #nameText {
+  margin-top: 15%;
   text-align: center;
   text-transform: uppercase;
   font-family: 'Space Mono', monospace; }
 
+#status-container .status {
+  margin-left: 10%;
+  color: #060606; }
+
 #search-form {
   text-align: right;
-  margin-right: 23%; }
+  margin-left: 60%;
+  width: 250px; }
+  #search-form #search-button {
+    border-radius: 5%;
+    background-color: black; }
+  #search-form #search-value {
+    font-family: 'Space Mono', monospace; }
+
+#search-button {
+  border-radius: 5%;
+  background-color: black; }
+
+#top-red-dots {
+  position: absolute;
+  display: flex;
+  margin-top: 75px;
+  margin-left: 510px; }
+  #top-red-dots .red-dots {
+    height: 10px;
+    width: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 6px; }
 
 /*# sourceMappingURL=main.css.map */
