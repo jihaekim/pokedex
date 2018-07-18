@@ -63,6 +63,7 @@ body{
 #container{
     display:flex;
     justify-content: center;
+
     
 
     #pokemon-container{
@@ -70,6 +71,18 @@ body{
         background-color:#ecefea;
         border-radius: 5%;
         border: 2px solid black;
+    }
+
+    #grey-border{
+        @include dimension(350px,350px);
+        background-color: #979d9e;
+        position: absolute;
+        z-index:-1;
+        right: 738px;
+        top: 126px;
+        border-radius: 5%;
+        border: 2px solid black;
+
     }
     
     #status-container{
@@ -114,6 +127,7 @@ body{
     text-align: right;
     margin-left:60%;
     width:250px;
+    margin-top: 20px;
 
     #search-button{
         border-radius: 5%;
@@ -148,14 +162,20 @@ body{
 
 }
 
-#grey-border{
-    @include dimension(350px,350px);
-    background-color: #979d9e;
-    position: absolute;
-    z-index:-1;
-    right: 738px;
-    top: 126px;
-    border-radius: 5%;
-    border: 2px solid black;
-    // margin-
+
+#buttons{
+    #blue-button{
+        @include dimension(40px,30px);
+        background-color: #7af1f9;
+    }
+
+    #green-button{
+        @include dimension(10px,30px);
+        background-color: #7af1f9;
+    }
+
+    #red-button{
+        @include dimension(10px,30px);
+        background-color: #7af1f9;
+    }
 }

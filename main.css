@@ -40,6 +40,16 @@ body {
     background-color: #ecefea;
     border-radius: 5%;
     border: 2px solid black; }
+  #container #grey-border {
+    height: 350px;
+    width: 350px;
+    background-color: #979d9e;
+    position: absolute;
+    z-index: -1;
+    right: 738px;
+    top: 126px;
+    border-radius: 5%;
+    border: 2px solid black; }
   #container #status-container {
     height: 250px;
     width: 325px;
@@ -68,7 +78,8 @@ body {
 #search-form {
   text-align: right;
   margin-left: 60%;
-  width: 250px; }
+  width: 250px;
+  margin-top: 20px; }
   #search-form #search-button {
     border-radius: 5%;
     background-color: black; }
@@ -92,15 +103,17 @@ body {
     background-color: red;
     margin-right: 6px; }
 
-#grey-border {
-  height: 350px;
-  width: 350px;
-  background-color: #979d9e;
-  position: absolute;
-  z-index: -1;
-  right: 738px;
-  top: 126px;
-  border-radius: 5%;
-  border: 2px solid black; }
+#buttons #blue-button {
+  height: 40px;
+  width: 30px;
+  background-color: #7af1f9; }
+#buttons #green-button {
+  height: 10px;
+  width: 30px;
+  background-color: #7af1f9; }
+#buttons #red-button {
+  height: 10px;
+  width: 30px;
+  background-color: #7af1f9; }
 
 /*# sourceMappingURL=main.css.map */
