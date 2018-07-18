@@ -63,14 +63,13 @@ body{
 #container{
     display:flex;
     justify-content: center;
-    margin-top: 5%;
+    
 
     #pokemon-container{
-        @include dimension(370px,370px);
+        @include dimension(250px,300px);
         background-color:#ecefea;
         border-radius: 5%;
-        border: 20px solid $light-grey;
-        border-bottom: 90px solid $light-grey;
+        border: 2px solid black;
     }
     
     #status-container{
@@ -81,6 +80,7 @@ body{
         border-radius:5%;
         background-color:#81f945;
         font-family: 'Space Mono', monospace;
+        border: 2px solid black;
 
     }
 }
@@ -90,6 +90,7 @@ body{
     #pokemonPic{
         @include dimension(200px,200px );
         margin-left: 20%;
+       
         
     }
     #nameText {
@@ -133,8 +134,8 @@ body{
 #top-red-dots{
     position: absolute;
     display: flex;
-    margin-top: 75px;
-    margin-left: 510px;
+    margin-left: 505px;
+    top: 138px;
 
 
     .red-dots{
@@ -147,4 +148,14 @@ body{
 
 }
 
-
+#grey-border{
+    @include dimension(350px,350px);
+    background-color: #979d9e;
+    position: absolute;
+    z-index:-1;
+    right: 738px;
+    top: 126px;
+    border-radius: 5%;
+    border: 2px solid black;
+    // margin-
+}
