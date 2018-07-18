@@ -1,6 +1,12 @@
 body {
-  background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/VGiBmTeaeilt7mgjb/video-game-background-blue_451fb1bpx__F0000.png");
-  background-size: cover; }
+  background-color: red; }
+
+#circles #blue-circle {
+  height: 100px;
+  width: 100px; }
+
+#pokemon-logo {
+  height: 100px; }
 
 #container {
   display: flex;
@@ -18,7 +24,7 @@ body {
     margin-left: 5%;
     margin-top: 3%;
     border-radius: 5%;
-    background-color: #7b818c;
+    background-color: #060606;
     font-family: 'Space Mono', monospace; }
 
 #pokemon-container #pokemonPic {
@@ -32,7 +38,8 @@ body {
   font-family: 'Space Mono', monospace; }
 
 #status-container .status {
-  margin-left: 10%; }
+  margin-left: 10%;
+  color: white; }
 
 #search-form {
   text-align: right;

@@ -1,12 +1,31 @@
-$light-gray :#7b818c;
+$dark-black :#060606;
 @mixin dimension ($height,$width){
     height: $height;
     width: $width;
 }
+// @mixin circle{
+//     border-radius:50%;
+// }
 
 body{
-    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/VGiBmTeaeilt7mgjb/video-game-background-blue_451fb1bpx__F0000.png");
-    background-size: cover;
+    background-color:red;
+    // background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/VGiBmTeaeilt7mgjb/video-game-background-blue_451fb1bpx__F0000.png");
+    // background-size: cover;
+}
+
+//making circle for gameboy design
+#circles{
+    #blue-circle{
+        @include dimension(100px,100px);
+    }
+}
+
+
+
+
+
+#pokemon-logo{
+    height:100px;
 }
 
 
@@ -28,7 +47,7 @@ body{
         margin-left:5%;
         margin-top:3%;
         border-radius:5%;
-        background-color:$light-gray;
+        background-color:$dark-black;
         font-family: 'Space Mono', monospace;
 
     }
@@ -53,6 +72,7 @@ body{
 #status-container{
     .status{
         margin-left:10%;
+        color:white;
     }
 }
 
