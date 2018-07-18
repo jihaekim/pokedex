@@ -5,15 +5,13 @@ $light-grey: #979d9e;
     height: $height;
     width: $width;
 }
-// @mixin circle{
-//     border-radius:50%;
-// }
+
 
 body{
-   
     background-color:red;
-    // background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/VGiBmTeaeilt7mgjb/video-game-background-blue_451fb1bpx__F0000.png");
-    // background-size: cover;
+    border: 5px solid black;
+    height: 805px;
+
 }
 
 //making circle for gameboy design
@@ -69,11 +67,10 @@ body{
 
     #pokemon-container{
         @include dimension(370px,370px);
-        background-color:white;
+        background-color:#ecefea;
         border-radius: 5%;
         border: 20px solid $light-grey;
-        border-bottom: 100px solid $light-grey;
-       
+        border-bottom: 90px solid $light-grey;
     }
     
     #status-container{
@@ -82,7 +79,7 @@ body{
         margin-left:5%;
         margin-top:3%;
         border-radius:5%;
-        background-color:$dark-black;
+        background-color:#81f945;
         font-family: 'Space Mono', monospace;
 
     }
@@ -96,7 +93,7 @@ body{
         
     }
     #nameText {
-        margin-top: 25%;
+        margin-top:15%;
         text-align: center;
         text-transform:uppercase;
         font-family: 'Space Mono', monospace;
@@ -105,9 +102,10 @@ body{
 
 
 #status-container{
+    
     .status{
         margin-left:10%;
-        color:white;
+        color:$dark-black;
     }
 }
 
@@ -115,6 +113,38 @@ body{
     text-align: right;
     margin-left:60%;
     width:250px;
+
+    #search-button{
+        border-radius: 5%;
+        background-color: black;
+    }
+
+    #search-value{
+        font-family: 'Space Mono', monospace;
+    }
     
 }
+
+
+#search-button{
+    border-radius: 5%;
+    background-color: black;
+}
+#top-red-dots{
+    position: absolute;
+    display: flex;
+    margin-top: 75px;
+    margin-left: 510px;
+
+
+    .red-dots{
+        @include dimension(10px,10px);
+        border: 2px solid black;
+        border-radius: 50%;
+        background-color: red;
+        margin-right: 6px;
+    }
+
+}
+
 
