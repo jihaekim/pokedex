@@ -103,17 +103,21 @@ body {
     background-color: red;
     margin-right: 6px; }
 
-#buttons #blue-button {
-  height: 40px;
-  width: 30px;
-  background-color: #7af1f9; }
-#buttons #green-button {
-  height: 10px;
-  width: 30px;
-  background-color: #7af1f9; }
-#buttons #red-button {
-  height: 10px;
-  width: 30px;
-  background-color: #7af1f9; }
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly; }
+  #buttons #blue-button {
+    height: 40px;
+    width: 30px;
+    background-color: #7af1f9; }
+  #buttons #green-button {
+    height: 10px;
+    width: 30px;
+    background-color: white; }
+  #buttons #red-button {
+    height: 10px;
+    width: 30px;
+    background-color: black; }
 
 /*# sourceMappingURL=main.css.map */

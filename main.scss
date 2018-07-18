@@ -164,6 +164,10 @@ body{
 
 
 #buttons{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
     #blue-button{
         @include dimension(40px,30px);
         background-color: #7af1f9;
@@ -171,11 +175,11 @@ body{
 
     #green-button{
         @include dimension(10px,30px);
-        background-color: #7af1f9;
+        background-color: white
     }
 
     #red-button{
         @include dimension(10px,30px);
-        background-color: #7af1f9;
+        background-color: black;
     }
 }
