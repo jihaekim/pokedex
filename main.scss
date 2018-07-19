@@ -1,6 +1,8 @@
 $dark-black :#060606;
 $light-blue:#7af1f9;
 $light-grey: #979d9e;
+$bright-green:#81f945;
+
 @mixin dimension ($height,$width){
     height: $height;
     width: $width;
@@ -63,14 +65,26 @@ body{
 #container{
     display:flex;
     justify-content: center;
-    margin-top: 5%;
+
+    
 
     #pokemon-container{
-        @include dimension(370px,370px);
+        @include dimension(250px,300px);
         background-color:#ecefea;
         border-radius: 5%;
-        border: 20px solid $light-grey;
-        border-bottom: 90px solid $light-grey;
+        border: 2px solid black;
+    }
+
+    #grey-border{
+        @include dimension(350px,350px);
+        background-color: #979d9e;
+        position: absolute;
+        z-index:-1;
+        right: 738px;
+        top: 126px;
+        border-radius: 5%;
+        border: 2px solid black;
+
     }
     
     #status-container{
@@ -79,8 +93,9 @@ body{
         margin-left:5%;
         margin-top:3%;
         border-radius:5%;
-        background-color:#81f945;
+        background-color:$bright-green;
         font-family: 'Space Mono', monospace;
+        border: 2px solid black;
 
     }
 }
@@ -90,6 +105,7 @@ body{
     #pokemonPic{
         @include dimension(200px,200px );
         margin-left: 20%;
+       
         
     }
     #nameText {
@@ -113,6 +129,7 @@ body{
     text-align: right;
     margin-left:60%;
     width:250px;
+    margin-top: 20px;
 
     #search-button{
         border-radius: 5%;
@@ -133,8 +150,8 @@ body{
 #top-red-dots{
     position: absolute;
     display: flex;
-    margin-top: 75px;
-    margin-left: 510px;
+    margin-left: 505px;
+    top: 138px;
 
 
     .red-dots{
@@ -147,4 +164,35 @@ body{
 
 }
 
+.bottom-buttons{
+    margin:30px;
+ 
+}
 
+#buttons{
+    display:flex;
+    flex-direction: row;
+    padding-left: 400px;
+    
+
+    #blue-button{
+        @include dimension(40px,40px);
+        background-color: #3868d1;
+        border-radius:50%;
+        border: 1px solid black;
+    }
+
+    #green-button{
+        @include dimension(10px,50px);
+        background-color: $bright-green;
+        border-radius: 20%;
+        border: 1px solid black;
+    }
+
+    #red-button{
+        @include dimension(10px,50px);
+        background-color: #f44e24;
+        border-radius: 20%;
+        border: 1px solid black;
+    }
+}
