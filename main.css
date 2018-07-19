@@ -103,21 +103,30 @@ body {
     background-color: red;
     margin-right: 6px; }
 
+.bottom-buttons {
+  margin: 30px; }
+
 #buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly; }
+  padding-left: 400px; }
   #buttons #blue-button {
     height: 40px;
-    width: 30px;
-    background-color: #7af1f9; }
+    width: 40px;
+    background-color: #3868d1;
+    border-radius: 50%;
+    border: 1px solid black; }
   #buttons #green-button {
     height: 10px;
-    width: 30px;
-    background-color: white; }
+    width: 50px;
+    background-color: #81f945;
+    border-radius: 20%;
+    border: 1px solid black; }
   #buttons #red-button {
     height: 10px;
-    width: 30px;
-    background-color: black; }
+    width: 50px;
+    background-color: #f44e24;
+    border-radius: 20%;
+    border: 1px solid black; }
 
 /*# sourceMappingURL=main.css.map */

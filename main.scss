@@ -1,6 +1,8 @@
 $dark-black :#060606;
 $light-blue:#7af1f9;
 $light-grey: #979d9e;
+$bright-green:#81f945;
+
 @mixin dimension ($height,$width){
     height: $height;
     width: $width;
@@ -91,7 +93,7 @@ body{
         margin-left:5%;
         margin-top:3%;
         border-radius:5%;
-        background-color:#81f945;
+        background-color:$bright-green;
         font-family: 'Space Mono', monospace;
         border: 2px solid black;
 
@@ -162,24 +164,35 @@ body{
 
 }
 
+.bottom-buttons{
+    margin:30px;
+ 
+}
 
 #buttons{
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    padding-left: 400px;
+    
 
     #blue-button{
-        @include dimension(40px,30px);
-        background-color: #7af1f9;
+        @include dimension(40px,40px);
+        background-color: #3868d1;
+        border-radius:50%;
+        border: 1px solid black;
     }
 
     #green-button{
-        @include dimension(10px,30px);
-        background-color: white
+        @include dimension(10px,50px);
+        background-color: $bright-green;
+        border-radius: 20%;
+        border: 1px solid black;
     }
 
     #red-button{
-        @include dimension(10px,30px);
-        background-color: black;
+        @include dimension(10px,50px);
+        background-color: #f44e24;
+        border-radius: 20%;
+        border: 1px solid black;
     }
 }
