@@ -13,7 +13,7 @@ class MsPokeBowl{
      get(name){
          
          for(let i=0; i<this.pokemonArray.length; i++){
-             if(this.pokemonArray[i].pokeName === name){
+             if(this.pokemonArray[i].pokemonName === name){
                  return this.pokemonArray[i];
             }
          }
